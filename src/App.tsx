@@ -1,11 +1,13 @@
+import { Navigate, Route, Routes } from "react-router-dom";
+import ProductPage from "./components/product-page";
 
 function App() {
-
   return (
-   <main>
-    Hello world
-   </main>
-  )
+    <Routes>
+      <Route path="/" element={<Navigate to="/product/t-shirt" />} /> /
+      <Route path="/product/t-shirt" element={<ProductPage />} /> /
+    </Routes>
+  );
 }
 
-export default App
+export default App;
